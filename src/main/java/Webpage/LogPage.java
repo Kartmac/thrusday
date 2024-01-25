@@ -18,12 +18,13 @@ public class LogPage {
 		driver.findElement(By.xpath("//input[@title='Please enter your password']")).sendKeys("ZPMHQHIA");
 		
 		driver.findElement(By.xpath("//button[@class='btn green_btn']")).click();
-		driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(10));
-		driver.findElement(By.xpath("//a[@class='nav-link']")).click();
-		Thread.sleep(1000);
+		
+		Thread.sleep(2000);
+	
+	
+		driver.findElement(By.xpath("//a[@href='/Authenticate/Logout']/ancestor-or-self::li")).click();
+		Thread.sleep(2000);
 		driver.findElement(By.xpath("//a[@href='/Authenticate/Logout']")).click();
-		
-		
 	}
 
 }
